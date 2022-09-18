@@ -44,14 +44,15 @@ echo ${array4[@]}
 
 # task 3
 function_unite_array() {
-arr=(${array1[@]} ${array2[@]})
+arr=($@)
 echo ${arr[@]}
 }
 
 
 function_add_first_element_array 23
 function_add_last_element_array world
-function_unite_array
+function_unite_array ${array1[@]} ${array2[@]}
+
 
 
 
